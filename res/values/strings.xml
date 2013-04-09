@@ -3,11 +3,11 @@
     <string name="start_message">Start performing useful work.\nEnter your prime goal:</string>
     <string name="prime_message">This is the prime class.</string>
     <string name="menu_about">About</string>
-    <string name="title_activity_main">MainActivity</string>
-    <string name="title_activity_prime">PrimeActivity</string>
-    <string name="title_activity_about">AboutActivity</string>
+    <string name="title_activity_main">PrimeGen</string>
+    <string name="title_activity_prime">Generated Primes</string>
+    <string name="title_activity_about">About</string>
     <string name="button_start">Start</string>
-    <string name="generated_primes">Init</string>
+    <string name="generated_primes">init</string>
     <string name="number_warning">Easy there cowboy, no bigger than 1000!</string>
-    <string name="about_string">This is a useful app made by Hampus Liljekvist.\nIt calculates all primes between 1 and x using a secret method.</string>
+    <string name="about_string">This is a useful app made by Hampus Liljekvist for performing useful work.\nIt calculates all prime numbers between 1 and a given number using a secret and efficient method.</string>
 </resources>

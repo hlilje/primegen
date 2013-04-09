@@ -12,13 +12,13 @@ import android.widget.TextView;
  * The activity used to display the prime number generator.
  * 
  * @author Hampus Liljekvist
- * @version 2013-04-07
+ * @version 2013-04-09
  */
 public class PrimeActivity extends Activity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 	    super.onCreate(savedInstanceState);
-	    setContentView(R.layout.activity_prime);
+	    setContentView(R.layout.layout_activity_prime);
 	    
 	    // Get the intent that brought you here
 	    Intent intent = getIntent();
@@ -96,7 +96,7 @@ public class PrimeActivity extends Activity {
      */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.activity_prime, menu);
+        getMenuInflater().inflate(R.menu.menu_activity_prime, menu);
         return true;
     }
     

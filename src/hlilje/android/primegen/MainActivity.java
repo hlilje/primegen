@@ -7,13 +7,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.TextView;
 
 /**
  * The main activity for the PrimeGen application.
  * 
  * @author Hampus Liljekvist
- * @version 2013-04-07
+ * @version 2013-04-09
  */
 public class MainActivity extends Activity {
 	// Key used to identify the user specified prime limit
@@ -24,7 +23,7 @@ public class MainActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.layout_activity_main);
     }
 
     /**
@@ -32,7 +31,7 @@ public class MainActivity extends Activity {
      */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.activity_main, menu);
+        getMenuInflater().inflate(R.menu.menu_activity_main, menu);
         return true;
     }
     
@@ -58,21 +57,22 @@ public class MainActivity extends Activity {
     	Intent intent = new Intent(this, PrimeActivity.class);
     	EditText numberBox = (EditText) findViewById(R.id.numberBox);
     	
-    	//TODO, this only works if you send a String?
+    	// This only works if you send a String?
     	if(numberBox != null) {
     		String boxInput = numberBox.getText().toString();
-    		// Will crash at parseInt if no number is supplied otherwise
+    		// Would otherwise crash at parseInt if no number was supplied
     		if(!boxInput.equals("")) {
-    			// Safe since specified as a number in xml-file
+    			// Safe since specified as a number in the xml-file meaning
+    			// the user can't enter negative numbers or random characters
     			int limit = Integer.parseInt(boxInput);
     			String warning = getString(R.string.number_warning);
     			
-    			// Check for the limit size to avoid program freezes
+    			// Check for the limit size to avoid unreasonable CPU stress
     			if(!(limit > 1000))
-    				// Limit ok, put the limit
+    				// Limit ok, add the limit
     				intent.putExtra(EXTRA_LIMIT, limit);
     			else {
-    				// Put a warning instead
+    				// Add a warning instead
     				intent.putExtra(WARNING_MESSAGE, warning);
     			}
     		}
