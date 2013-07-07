@@ -12,7 +12,7 @@ import android.widget.EditText;
  * The main activity for the PrimeGen application.
  * 
  * @author Hampus Liljekvist
- * @version 2013-04-09
+ * @version 2013-07-07
  */
 public class MainActivity extends Activity {
 	// Key used to identify the user specified prime limit
@@ -67,7 +67,7 @@ public class MainActivity extends Activity {
     			int limit = Integer.parseInt(boxInput);
     			String warning = getString(R.string.number_warning);
     			
-    			// Check for the limit size to avoid unreasonable CPU stress
+    			// Limit integer input to avoid unreasonable CPU stress
     			if(!(limit > 1000))
     				// Limit ok, add the limit
     				intent.putExtra(EXTRA_LIMIT, limit);

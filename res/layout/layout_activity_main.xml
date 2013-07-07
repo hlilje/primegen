@@ -31,8 +31,8 @@
         android:layout_alignBottom="@+id/text"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:inputType="number" >
+        android:inputType="number"
+        android:maxLength="9" >
         <requestFocus />
     </EditText>
-
 </RelativeLayout>
